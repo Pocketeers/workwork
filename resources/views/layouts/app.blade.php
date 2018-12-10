@@ -30,6 +30,8 @@
     <!-- Algolia Stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
 
+    <link rel="stylesheet" type="text/css" href="/HibahCalculator.css">
+
     @include('js_plugins.zendesk')
     @yield('js_stylesheets')
 </head>
@@ -48,12 +50,13 @@
     </div>
 
     <div class="container">
-        <!-- @include('footer') -->
+        {{-- @include('footer') --}}
     </div>
 
     @include('scripts')
     <script src="{{ elixir('js/app.js') }}"></script>
     @include('js_plugins.algolia_global')
     @yield('js_plugins')
+    <script src="/HibahCalculator.js"></script>
 </body>
 </html>

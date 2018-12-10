@@ -11,6 +11,7 @@
 /**
  * Home-Dashboard routes
  */
+
 Route::get('/terms', 'HomeController@terms');
 
 Route::get('/dashboard', 'HomeController@dashboard');

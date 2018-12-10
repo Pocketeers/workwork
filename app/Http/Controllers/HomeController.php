@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'terms']);
+        $this->middleware('auth', ['except' => ['terms', 'calculator']]);
     }
 
     /**
@@ -485,8 +485,6 @@ class HomeController extends Controller
 
         return redirect('/dashboard');
     }
-
-
 
     protected function unauthorized(Request $request)
     {

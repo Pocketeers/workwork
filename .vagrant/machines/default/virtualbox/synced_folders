@@ -1,1 +1,0 @@
-{"virtualbox":{"/home/vagrant/workwork":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/workwork","hostpath":"/Users/aidilgoh/Code/workwork","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/aidilgoh/Code/workwork","disabled":false,"__vagrantfile":true}}}
