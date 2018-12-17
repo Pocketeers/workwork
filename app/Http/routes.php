@@ -301,4 +301,13 @@ Route::post('/a/company/upload/logo', 'Admin\AdminProfileController@uploadLogo')
 
 Route::delete('/a/company/remove/logo', 'Admin\AdminProfileController@remove');
 
+/*
+ * ------------------------------------------------------------------------------------------
+ * Admin profile routes
+ * ------------------------------------------------------------------------------------------
+ *
+ */
+
+Route::get('/api/list/all', 'APIHomeController@index')->name('api_all');
+
 
