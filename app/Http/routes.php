@@ -286,9 +286,12 @@ Route::get('/a/advert/{id}/job/requests/{application_id}', 'Admin\AdminControlle
 
 Route::post('/a/job/requests/{application_id}/response', 'Admin\AdminController@response');
 
-/**
-* Admin profile routes
-*/
+/*
+ * ------------------------------------------------------------------------------------------
+ * Admin profile routes
+ * ------------------------------------------------------------------------------------------
+ *
+ */
 Route::get('/a/company/{id}/{business_name}', 'Admin\AdminProfileController@profile')->name('admin_profile');
 
 Route::get('/a/company/edit', 'Admin\AdminProfileController@edit');
@@ -303,7 +306,7 @@ Route::delete('/a/company/remove/logo', 'Admin\AdminProfileController@remove');
 
 /*
  * ------------------------------------------------------------------------------------------
- * Admin profile routes
+ * Api routes
  * ------------------------------------------------------------------------------------------
  *
  */
