@@ -9,7 +9,7 @@
             <hr>
         </div>
         <form role="form" method="POST" action="{{ url('/register') }}" id="myForm">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            {!! csrf_field() !!}
 
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <label>Your Name</label>

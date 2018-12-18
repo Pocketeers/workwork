@@ -44,7 +44,8 @@ return [
     |
     */
 
-    'encrypt' => false,
+    // set this to true if your in laravel 5.2 and have ssl on remote server (you will have token mismatch if on false)
+    'encrypt' => true,
 
     /*
     |--------------------------------------------------------------------------
