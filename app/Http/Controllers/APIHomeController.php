@@ -12,7 +12,7 @@ class APIHomeController extends Controller
 {
     public function index()
     {
-    	$adverts = Advert::all();
+    	$adverts = Advert::orderBy('created_at', 'DESC')->get();
 
     	return $adverts->toJson();
     }
