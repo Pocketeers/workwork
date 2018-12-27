@@ -312,3 +312,5 @@ Route::delete('/a/company/remove/logo', 'Admin\AdminProfileController@remove');
  */
 
 Route::get('/api/advert/all', 'APIHomeController@index')->name('api_all');
+
+Route::get('/api/advert/{advert}', 'APIHomeController@show')->name('api_all');

@@ -16,4 +16,9 @@ class APIHomeController extends Controller
 
     	return $adverts->toJson();
     }
+
+    public function show(Advert $advert)
+    {
+    	return $advert->toJson();
+    }
 }
