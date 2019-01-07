@@ -3,14 +3,15 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
 use App\Traits\HasRoles;
 
 
 class User extends Authenticatable
 {
-    use HasRoles, Billable;
-    
+    use HasRoles, Billable, Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -43,7 +44,7 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
-    
+
 
     /**
      * defining "users" table relationship with "job_seekers" table
@@ -77,7 +78,7 @@ class User extends Authenticatable
             $givenAvatar = $this->avatar;
 
         }else{
-            
+
             $givenAvatar = "/images/defaults/default.jpg";
         }
 

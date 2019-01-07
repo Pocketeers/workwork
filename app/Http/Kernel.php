@@ -28,11 +28,13 @@ class Kernel extends HttpKernel
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
             'throttle:60,1',
+            'bindings',
         ],
     ];
 
@@ -46,7 +48,7 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
+        'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'jobSeeker' => \App\Http\Middleware\MustBeJobSeeker::class,
@@ -55,6 +57,8 @@ class Kernel extends HttpKernel
         'subscribed' => \App\Http\Middleware\MustBeSubscribed::class,
         'noCompanyProfile' => \App\Http\Middleware\NoCompanyProfile::class,
         'noProfile' => \App\Http\Middleware\NoProfile::class,
-        'admin' => \App\Http\Middleware\MustBeAdmin::class
+        'admin' => \App\Http\Middleware\MustBeAdmin::class,
+        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+
     ];
 }
