@@ -1,0 +1,47 @@
+Arguments: 
+  /usr/bin/node /home/vagrant/.yarn/bin/yarn.js add acios
+
+PATH: 
+  /vendor/bin:/home/vagrant/bin:/home/vagrant/.local/bin:/home/vagrant/.yarn/bin:/home/vagrant/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.9.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/acios: Not found
+      at Request.params.callback [as _callback] (/home/vagrant/.yarn/lib/cli.js:65894:18)
+      at Request.self.callback (/home/vagrant/.yarn/lib/cli.js:129018:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/home/vagrant/.yarn/lib/cli.js:129990:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/home/vagrant/.yarn/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "prod": "gulp --production",
+      "dev": "gulp watch"
+    },
+    "devDependencies": {
+      "gulp": "^3.9.1",
+      "laravel-elixir": "^5.0.0",
+      "bootstrap-sass": "^3.3.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
