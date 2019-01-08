@@ -321,14 +321,3 @@ Route::get('/a/company/logo', 'Admin\AdminProfileController@logo');
 Route::post('/a/company/upload/logo', 'Admin\AdminProfileController@uploadLogo');
 
 Route::delete('/a/company/remove/logo', 'Admin\AdminProfileController@remove');
-
-/*
- * ------------------------------------------------------------------------------------------
- * Api routes
- * ------------------------------------------------------------------------------------------
- *
- */
-
-Route::get('/api/advert/all', 'APIHomeController@index')->name('api_all');
-
-Route::get('/api/advert/{advert}', 'APIHomeController@show')->name('api_all');
